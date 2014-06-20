@@ -1,20 +1,20 @@
 <h1>All Products</h1>
 
-<%= link_to 'New Product' new_product_path %>
+<%= link_to 'New Product', new_product_path %>
 
 <table>
 	<tr>
-		<th>Title</th>
+		<th>Name</th>
 		<th>Text</th>
 	</tr>
-	<% @articles.each do |article| %>
-		<tr>
-			<% @articles.each do |article| %>
+	<% @products.each do |product| %>
 			<tr>
-				<td><%= article.title %></td>
-				<td><%= article.text %></td>
-				<td><%= link_to 'Show', article_path(article) %></td>
-				<td><%= link_to 'Edit', edit_article_path(article) %></td>
+				<td><%= product.name %></td>
+				<td><%= product.description %></td>
+				<td><%= link_to 'Show', product_path(product) %></td>
+				<td><%= link_to 'Edit', edit_product_path(product) %></td>
+				<td><%= product.formatted_price %></td>
 		</tr>
-		<% end %>
+	<% end %>
 </table>
+

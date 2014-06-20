@@ -8,11 +8,11 @@
 			</h2>
 			<ul>
 				<% @product.errors.full_messages.each do |msg| %>
-				<li><% msg %></li>
-	<% end %>
+					<li><%= msg %></li>
+				<% end %>
 			</ul>
 		</div>
-
+	<% else %>
 		<div class ="field">
 			<%= f.label :name %><br />
 			<%= f.text_field :name %>
@@ -31,5 +31,6 @@
 		<div class="actions">
 			<%= f.submit %>
 		</div>
+	<% end %>
 <% end %>
 

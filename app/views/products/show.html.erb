@@ -2,11 +2,15 @@
 
 <p>
 	<strong>Title:</strong>
-	<%= @product.title %>
+	<%= @product.name %>
 </p>
 
 <p>
 	<strong>Text:</strong>
-	<%= @product.text %>
+	<%= @product.description %>
 </p>
 
+<p>
+	<strong>Price in dollars:</strong>
+	<%= @product.formatted_price %>
+</p>
