@@ -7,12 +7,10 @@ $(document).on('ready page:load', functon() {
 		event.preventDefault();
 		var searchValue = $('#search').val();
 
-		$.ajax({
-			url: '/products?search=' + seachValue,
-			type: 'GET',
-			dataType: 'html',
-		}).done(function(data) {
-			$('#products').html(data);
+		$.get('/products?search=' +searchValue)
+			.done(function(data){
+				console.log(data);
+				$('#products').html(data);
+			});
 		});
-	})
-});
+	});
