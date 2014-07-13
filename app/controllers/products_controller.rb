@@ -1,9 +1,7 @@
 class ProductsController < ApplicationController
-  before_filter :ensure_logged_in, :except => [:show, :index]
+  before_filter :ensure_logged_in, :only => [:show, :index]
 
   def index
-
-
    @products = Product.order('products.created_at DESC').page(params[:page])
 
     respond_to do |format|
@@ -49,7 +47,7 @@ class ProductsController < ApplicationController
   end 
 
   def destroy
-  	@products = Product.find(params[:id])
+  	@product = Product.find(params[:id])
   	@product.destroy
   	redirect_to products_path
   end
