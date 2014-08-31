@@ -39,3 +39,5 @@ gem 'kaminari'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#Use foundation for styling
+gem 'foundation-rails'
