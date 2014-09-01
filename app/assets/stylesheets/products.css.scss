@@ -27,9 +27,18 @@ nav.nav-links {
 ul.left-nav {
 	padding-left: 50px;
 	margin-top:6px;
+	li a {
+		font-family: maven pro;
+
+	}
 }
 
 ul.right-nav {
 	padding-right: 50px;
 	margin-top:6px;
+}
+
+.search-button { /*styling for the search button*/
+	background-color: silver;
+	color: black;
 }
