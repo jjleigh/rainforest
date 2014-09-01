@@ -6,30 +6,45 @@
     <title>Rainforest</title>
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
     <link href='http://fonts.googleapis.com/css?family=Philosopher:700|Tenor+Sans|Muli|Maven+Pro:400,500' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <div class=" sticky">
-      <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+      <nav class="top-bar logo-nav" data-topbar role="navigation" data-options="sticky_on: large">
         <ul class="title-area">
           <li class="name">
             <h1 id="app-logo"><%= link_to 'Rainforest', root_url %></h1>
           </li>
            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar icon"><a href="#"><span>Menu</span></a></li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
         </ul>
+      </nav>
 
+    <div class=" sticky">
+      <nav class="top-bar nav-links" data-topbar role="navigation" data-options="sticky_on: large">
         <section class="top-bar-section">
           <!-- Right Nav Section -->
-          <ul class="right">
+          <ul class="left left-nav">
             <li>
               <%= link_to 'Account' %>
             </li>
             <li><%= link_to 'Log in', new_user_path %></li>
             <li><%= link_to 'Sign up', new_user_path %></li>
+          </ul>
+          <ul class="right right-nav">
+            <li class="has-form">
+              <div class="row collapse">
+                <div class="large-8 small-9 columns">
+                  <input type="text" placeholder="Find Stuff">
+                </div>
+                <div class="large-4 small-3 columns">
+                  <a href="#" class="button expand"><i class="fa fa-search"></i></a>
+                </div>
+              </div>
+            </li>
           </ul>
         </section>
       </nav>

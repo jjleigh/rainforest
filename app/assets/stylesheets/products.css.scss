@@ -1,5 +1,29 @@
-#app-logo {
+
+/*styling for the navigation logo*/
+nav.logo-nav {
+text-align:center;
+/*height:50px;*/
+background-color: white;
+
+	#app-logo a {
 	font-family: Philosopher;
-	padding-left: 50px;
+	text-align: center;
 	font-size: 20px;
+	color: black !important;
+	}
+
+}
+
+ul.title-area {
+	width: 100%;
+}
+
+/*styling for the navigation*/
+
+.left-nav {
+	padding-left: 50px;
+}
+
+.right-nav {
+	padding-right: 50px;
 }
