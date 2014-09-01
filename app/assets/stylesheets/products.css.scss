@@ -4,12 +4,14 @@ nav.logo-nav {
 text-align:center;
 /*height:50px;*/
 background-color: white;
+height: 90px;
 
 	#app-logo a {
 	font-family: Philosopher;
 	text-align: center;
-	font-size: 20px;
+	font-size: 35px;
 	color: black !important;
+	padding-top: 18px;
 	}
 
 }
@@ -19,11 +21,15 @@ ul.title-area {
 }
 
 /*styling for the navigation*/
-
-.left-nav {
+nav.nav-links {
+	height: 55px;
+}
+ul.left-nav {
 	padding-left: 50px;
+	margin-top:6px;
 }
 
-.right-nav {
+ul.right-nav {
 	padding-right: 50px;
+	margin-top:6px;
 }
