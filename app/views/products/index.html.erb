@@ -1,17 +1,26 @@
-<h1>All Products</h1>
+<div class="row">
+	<div class="small-12 columns">
 
-<%= link_to "Add a product", new_product_path %>
+		<div class="row">
+			<div class="small-12 columns">		
+				<h1 class="text-center">All Products</h1>
+			</div>
+		</div>
 
-<!-- renders a helpful message with numbers of displayed vs. total entries -->
-<h1>Products <small><%= page_entries_info @products %></small></h1>
+			<%= link_to "Add a product", new_product_path %>
 
-<hr/>
+			<!-- renders a helpful message with numbers of displayed vs. total entries -->
+			<h1>Products <small><%= page_entries_info @products %></small></h1>
 
-<ul>
-    <div id="products">
-      <%= render @products %>
-    </div>
-</ul>
+			<hr/>
 
-<!-- outputs several pagination links such as « First ‹ Prev ... 2 3 4 5 6 7 8 9 10 ... Next › Last » -->
-<%= paginate @products %>
+			<ul>
+			    <div id="products">
+			      <%= render @products %>
+			    </div>
+			</ul>
+
+			<!-- outputs several pagination links such as « First ‹ Prev ... 2 3 4 5 6 7 8 9 10 ... Next › Last » -->
+			<%= paginate @products %>
+	</div>
+</div>

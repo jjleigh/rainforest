@@ -1,54 +1,63 @@
-<h1>Show Products</h1>
-<p>
-	<strong>Title:</strong>
-	<%= @product.name %>
-</p>
 
-<p>
-	<strong>Text:</strong>
-	<%= @product.description %>
-</p>
+<div class="row">
+  <div class="small-12 columns">
 
-<p>
-	<strong>Price in dollars:</strong>
-	<%= @product.formatted_price %>
-</p> 
-
-<!-- so if the current user is true they should be able to see the form below to create a new review. -->
-<% if current_user %>
-	<h3>Reviews</h3>
-
-<p>Reviews for <%= @product.name %></p>
-<div id="review-list">
-  <%= render :partial => "reviews" %>
-</div>
- 
-  <h4>New Review</h4>
-
-  <%= form_for [@product, @review], :remote => true do |f| %>
-    <% if @review.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
-
-        <ul>
-        <% @review.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
+    <div class="row">
+      <div class="small-12 columns">    
+        <p class='text-center'>
+          <strong>Title:</strong>
+          <%= @product.name %>
+        </p>
       </div>
+    </div>
+
+
+    <p>
+    	<strong>Text:</strong>
+    	<%= @product.description %>
+    </p>
+
+    <p>
+    	<strong>Price in dollars:</strong>
+    	<%= @product.formatted_price %>
+    </p> 
+
+    <!-- so if the current user is true they should be able to see the form below to create a new review. -->
+    <% if current_user %>
+    	<h3>Reviews</h3>
+
+    <p>Reviews for <%= @product.name %></p>
+    <div id="review-list">
+      <%= render :partial => "reviews" %>
+    </div>
+     
+      <h4>New Review</h4>
+
+      <%= form_for [@product, @review], :remote => true do |f| %>
+        <% if @review.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+            <ul>
+            <% @review.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :comment %><br />
+          <%= f.text_area :comment %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+
+    <% else %>
+      <p>Please <%= link_to "log in", new_session_path %> to add a review.</p> 
     <% end %>
-
-    <div class="field">
-      <%= f.label :comment %><br />
-      <%= f.text_area :comment %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-
-<% else %>
-  <p>Please <%= link_to "log in", new_session_path %> to add a review.</p> 
-<% end %>
-
+  </div>
+</div>
 
