@@ -12,7 +12,8 @@ User.create!({
 	email: "example@bitmakerlabs.com",
 	name: "Example User",
 	password: "pass",
-	password_confirmation: "pass"
+	password_confirmation: "pass",
+	id: 4
 	}
 )
 
@@ -21,7 +22,8 @@ User.create!({
 	Product.create({
 		name: "Product#{i}",
 		description: "Description#{i}",
-		price_in_cents: i
+		price_in_cents: i,
+		image: 'http://www.boheme.net.au/wp-content/uploads/2013/09/SAM1727-1000x450.jpg'
 		}
 	)
 end
