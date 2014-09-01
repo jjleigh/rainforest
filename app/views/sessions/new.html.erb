@@ -1,18 +1,35 @@
-<h1>Log in</h1>
+<div class="row session-form-container">
+	<div class="small-6 small-centered columns">
 
-<%= form_tag sessions_path do %>
-	<div>
-		<%= label_tag :email %><br/>
-		<%= text_field_tag :email, params[:email]%>
-	</div>
+		<div class="row session-header">
+			<div class="small-12 columns">
+				
+				<h1 class="text-center">Log in</h1>
+			</div>
+		</div>
+		
+		<div class="row session-form">
+			<div class="small-12 columns">
+				
+				<%= form_tag sessions_path do %>
+					<div>
+						<%= label_tag :email %><br/>
+						<%= text_field_tag :email, params[:email]%>
+					</div>
 
-	<div>
-		<%= label_tag :password %><br/>
-		<%= password_field_tag :password %>
-	</div>
+					<div>
+						<%= label_tag :password %><br/>
+						<%= password_field_tag :password %>
+					</div>
 
-	<div class="actions"><%= submit_tag "Log in" %>
+					<div class="actions text-center"><%= submit_tag "Log in", :class => 'button [tiny small large] form-button' %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+
 	</div>
-<% end %>
+</div>
+
 
 
