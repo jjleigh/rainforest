@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_filter :ensure_logged_in, :only => [:show, :index]
+  before_filter :ensure_logged_in, :except => [:show, :index]
 
   def index
    @products = Product.order('products.created_at DESC').page(params[:page])
