@@ -83,3 +83,71 @@ ul.right-nav {
 .show-page-header {
 	margin-bottom: 50px;
 }
+
+
+.product-header {
+	font-family: playball;
+	padding-bottom: 20px;
+	border-bottom: 2px solid black;
+}
+
+.product-info {
+	border-bottom: 2px solid black;
+	padding-bottom: 20px;
+	font-family: maven pro;
+}
+
+.product-img-container {
+	margin-bottom: 100px;
+
+}
+
+
+/*styling for the reviews on the show page*/
+
+.review-header {
+	margin-top: 35px;
+	margin-bottom: 50px;
+	padding-bottom: 35px;
+	font-family: maven pro;
+	border-bottom: 2px solid black;
+}
+
+#review-list {
+	border-bottom: 2px solid black;
+}
+
+.new-review-form {
+	padding-bottom: 150px;
+	padding-top: 50px;
+}
+
+.new-review-form textarea {
+	size:100px;
+	height:100px;
+}
+
+
+
+.comment {
+	margin-top: 20px;
+}
+
+.review {
+	margin-left: 70px;
+}
+
+.comment-label {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
