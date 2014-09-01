@@ -1,28 +1,9 @@
-== README
+== Rainforest
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description: 
 
-Things you may want to cover:
+  This is a smaller practice version of  the amazon.com online store.
+  
+Learning objective:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  In the first iterartion of this project the learning objective was to practice building apps in the ruby on rails framework, and to better  understand the concept of MVC in rails. In the second interation, the objective was to apply AJAX to the project and to gain a better understanding of how the AJAX tool works. AJAX was implemented for infitie scrolling and also on the forms.This is a completed project.
