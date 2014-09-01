@@ -1,15 +1,85 @@
-<div class="row">
+ 	<div class="row">
+    <div class="large-12 columns">
+
+    	<div id="slider">
+     		<ul class="example-orbit" data-orbit>
+				  <li>
+				    <img src="http://cdn.freshome.com/wp-content/uploads/2014/07/Farmhouse-1000x450.jpg" alt="slide 1" />
+				    <div class="orbit-caption">
+				      Caption One.
+				    </div>
+				  </li>
+				  <li class="active">
+				    <img src="http://torquestrong.com/wp-content/uploads/2013/12/TS_MainImage_1000x450_Alydia.jpg" alt="slide 2" />
+				    <div class="orbit-caption">
+				      Caption Two.
+				    </div>
+				  </li>
+				  <li>
+				    <img src="http://dressmeblog.me/wp-content/uploads/2013/08/CM-Fall-2013-Ad-Camaign-David-Sims-7-1000x450.jpg" alt="slide 3" />
+				    <div class="orbit-caption">
+				      Caption Three.
+				    </div>
+				  </li>
+				  <li>
+				    <img src="http://lafashionistaevents.com/wp-content/uploads/2014/08/female-4-1920-1000x450.jpg" alt="slide 3" />
+				    <div class="orbit-caption">
+				      Caption Three.
+				    </div>
+				  </li>
+				</ul>
+    	</div>
+    
+    <hr/>
+    </div>
+  </div>
+  
+ 
+ 
+  <div class="row">
+    <div class="large-4 columns">
+      <img src="http://media-cache-ec0.pinimg.com/736x/13/95/d5/1395d53de2a8cbe26ce694235c474d64.jpg"/>
+      <h4>This is a content section.</h4>
+      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+    </div>
+    
+    <div class="large-4 columns">
+      <img src="http://media-cache-cd0.pinimg.com/736x/4a/84/32/4a8432807a24d6c0199e13e10d0c9a3a.jpg"/>
+      <h4>This is a content section.</h4>
+      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+    </div>
+    
+    <div class="large-4 columns">
+      <img src="http://media-cache-ak0.pinimg.com/736x/d5/82/e1/d582e1f655cf5409c1b0bf9732b06acd.jpg"/>
+      <h4>This is a content section.</h4>
+      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+    </div>
+  
+    </div>
+   
+ 
+   
+
+
+
+
+
+<div class="row index-content">
 	<div class="small-12 columns">
 
 		<div class="row">
-			<div class="small-12 columns">		
-				<h1 class="text-center">All Products</h1>
+			<div class="small-6 small-centered columns index-header">		
+				<h3 class="text-center">All Products</h3>
 			</div>
 		</div>
 
 			
 			<!-- renders a helpful message with numbers of displayed vs. total entries -->
-			<h1>Products <small><%= page_entries_info @products %></small></h1>
+			<div class="row">
+				<div class="small-6 small-centered columns">
+					<h4 class="text-center"><small><%= page_entries_info @products %></small></h4>
+				</div>
+			</div>
 
 			<hr/>
 

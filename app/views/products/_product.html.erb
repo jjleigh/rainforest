@@ -1,3 +1,24 @@
+<!-- 
+  <div class="row">
+    <%# @products.each do |product| %>
+  
+      <div class="large-4 small-6 columns cs-style-3">
+        <figure>
+          <div class="blur-img">
+            <%#= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
+          </div>
+          
+          <figcaption>
+              <h5><%#= picture.title %></h5>
+              <span class="subheader"><%#= picture[:artist] %></span>
+
+          </figcaption>
+        </figure>
+      </div>
+    <%# end %>
+  </div> -->
+
+
 <%= link_to product_path(product.id) do %>
     <%= product.name %>
 <% end %>

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rainforest</title>
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-    <link href='http://fonts.googleapis.com/css?family=Philosopher:700|Tenor+Sans|Muli|Maven+Pro:400,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Muli|Maven+Pro:400,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nixie+One|Dynalight|Adamina|Playball|Seaweed+Script' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -28,17 +29,21 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="left left-nav">
-            <li class="has-dropdown">
-              <a href="#">Account</a>
-              <ul class="dropdown">
-                <li><%= link_to "Add a product", new_product_path %></li>
-                <li><a href="">Your Orders</a></li>
-                <li><a href="">Wish list</a></li>
-                <li><a href="">Help</a></li>
-              </ul>
-            </li>
-            <li><%= link_to 'Log in', new_session_path %></li>
-            <li><%= link_to 'Sign up', new_user_path %></li>
+            <% if current_user %>
+              <li class="has-dropdown">
+                <a href="#">Account</a>
+                <ul class="dropdown">
+                  <li><%= link_to "Add a product", new_product_path %></li>
+                  <li><a href="">Your Orders</a></li>
+                  <li><a href="">Wish list</a></li>
+                  <li><a href="">Help</a></li>
+                </ul>
+              </li>
+              <li><%= link_to 'Log out', new_session_path %></li>
+            <% else %>
+              <li><%= link_to 'Log in', new_session_path %></li>
+              <li><%= link_to 'Sign up', new_user_path %></li>
+            <% end %>
           </ul>
           <ul class="right right-nav">
             <li class="has-form">
