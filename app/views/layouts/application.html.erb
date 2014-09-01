@@ -29,7 +29,16 @@
           <!-- Right Nav Section -->
           <ul class="left left-nav">
             <li>
-              <%= link_to 'Account' %>
+              
+            </li>
+            <li class="has-dropdown">
+              <a href="#">Account</a>
+              <ul class="dropdown">
+                <li><%= link_to "Add a product", new_product_path %></li>
+                <li><a href="">Your Orders</a></li>
+                <li><a href="">Wish list</a></li>
+                <li><a href="">Help</a></li>
+              </ul>
             </li>
             <li><%= link_to 'Log in', new_user_path %></li>
             <li><%= link_to 'Sign up', new_user_path %></li>
