@@ -1,31 +1,28 @@
-<!-- 
-  <div class="row">
-    <%# @products.each do |product| %>
+
+  <div class="row ">
+    <% @products.each do |product| %>
   
-      <div class="large-4 small-6 columns cs-style-3">
+      <div class="large-5 small-6 columns each-product">
         <figure>
           <div class="blur-img">
-            <%#= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
+            <%= link_to image_tag(product.image), product_path(product.id), :class => 'index-image' %>
           </div>
           
           <figcaption>
-              <h5><%#= picture.title %></h5>
-              <span class="subheader"><%#= picture[:artist] %></span>
-
+            <p class='text-center'><%= link_to product.name, product_path(product.id)  %></p>
+            <div class="price">
+              $<%= product.formatted_price %>
+            </div>
+              <span class="subheader"><%= truncate(product.description, length: 100) %></span>
           </figcaption>
         </figure>
       </div>
-    <%# end %>
-  </div> -->
+    <% end %>
+  </div> 
 
 
-<%= link_to product_path(product.id) do %>
-    <%= product.name %>
-<% end %>
 
-<div class="price">
-	$<%= product.formatted_price %>
-</div>
 
-<!-- keeps the description to 100 characters or less -->
-<p><%= truncate(product.description, length: 100) %></p>
+
+
+

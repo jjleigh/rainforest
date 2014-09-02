@@ -45,6 +45,43 @@ ul.right-nav {
 
 /*styling for the index display*/
 
+#products {
+	margin-top: 50px;
+}
+
+.each-product {
+	width: 300px;
+}
+.blur-img {
+	height: 200px;
+	padding-top: 50px;
+
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.index-image {
+	height: 100%;
+}
+
+figure {
+	border: 5px solid silver;
+	width: 100%;
+
+
+}
+
+figcaption {
+	padding-top: 20px;
+	padding-left: 9px;
+	padding-bottom: 5px;
+	background-color: silver;
+
+	a {
+		color: black;
+	}
+}
+
 .content-section-header {
 	font-family: playball;
 }
@@ -57,6 +94,7 @@ ul.right-nav {
 	margin-top: 50px;
 	margin-bottom: 100px;
 }
+
 
 .index-header {
 	border: 3px solid black;
@@ -93,7 +131,7 @@ ul.right-nav {
 
 .product-info {
 	border-bottom: 2px solid black;
-	padding-bottom: 20px;
+	padding-bottom: 200px;
 	font-family: maven pro;
 }
 
