@@ -33,7 +33,7 @@
                 <a href="#">Account</a>
                 <ul class="dropdown">
                   <li><%= link_to "Add a product", new_product_path %></li>
-                  <li><a href="">Your Orders</a></li>
+                  <li><%= link_to 'Your products', user_path(current_user)%></li>
                   <li><a href="">Wish list</a></li>
                   <li><a href="">Help</a></li>
                 </ul>
