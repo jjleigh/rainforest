@@ -48,7 +48,7 @@
             <li class="has-form">
               <div class="row collapse">
                 <div class="large-8 small-9 columns">
-                  <input type="text" placeholder="Find Stuff">
+                   <%= text_field_tag :search, params[:search], :placeholder => 'Find stuff' %>
                 </div>
                 <div class="large-4 small-3 columns">
                   <a href="#" class="button [tiny small large] search-button"><i class="fa fa-search"></i></a>
@@ -59,6 +59,14 @@
         </section>
       </nav>
     </div>
+
+
+    <div class="row">
+      <div class="large-8 large-centered columns">
+        
+        <%= render 'layouts/messages' %>
+      </div>
+    </div> 
 
     <%= yield %>
     <%= javascript_include_tag "application" %>
