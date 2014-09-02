@@ -54,14 +54,15 @@ ul.right-nav {
 }
 .blur-img {
 	height: 200px;
-	padding-top: 50px;
-
+	background-color: red;
 	border-bottom: 1px solid black;
 	border-top: 1px solid black;
 }
 
-.index-image {
+.index-image img {
 	height: 100%;
+	width: 100%;
+
 }
 
 figure {
