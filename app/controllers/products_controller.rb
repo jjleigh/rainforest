@@ -2,17 +2,17 @@ class ProductsController < ApplicationController
   before_filter :ensure_logged_in, :except => [:show, :index]
 
   def index
-    if params[:search]
-      @products = Product.where('lower(name) = ?', (params[:search]).downcase)
+    # if params[:search]
+    #   @products = Product.search(params[:search])
 
-        if @products.size.zero?
-      # :notice => "No results found"
-          flash.now[:alert] = "No results found"
-      # redirect_to pictures_url, :notice => "No results found"
-          @products = Product.order('products.created_at DESC').page(params[:page])
-        end
+    #     if @products.size.zero?
+    #   # :notice => "No results found"
+    #       flash.now[:alert] = "No results found"
+    #   # redirect_to pictures_url, :notice => "No results found"
+    #       @products = Product.order('products.created_at DESC').page(params[:page])
+    #     end
 
-    else
+    # else
 
       @products = Product.order('products.created_at DESC').page(params[:page])
 
@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
         format.html #allows the controller to respond to Javascript
         format.js
       end
-    end
+    # end
   end
 
   def show

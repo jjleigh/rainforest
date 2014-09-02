@@ -12,5 +12,10 @@ class Product < ActiveRecord::Base
 		sprintf("%.2f", price_in_dollars)
 	end
 
+	def self.search(search)
+		@products = Product.where('lower(name) = ?', search.downcase)
+		
+	end
+
 	
 end
