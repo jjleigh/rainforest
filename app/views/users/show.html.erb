@@ -1,0 +1,44 @@
+  <div class="row">      
+    <div class="large-12 columns">
+    	<!-- This is the code to disply the header -->
+      <div class="large-12 small-centered columns">
+
+       <div class="row user-head-container">
+        <div class="small-12 small-centered columns">
+          <h3 class="text-center user-head">Your Products</h3>
+        </div>
+      </div>
+
+<!-- This is the code to display the pictures -->
+        <div class="row">
+          <div class="small-12 small-centered columns">
+
+            <div class="panel user-images-panel">
+              <div class="row">
+                <% @my_products.each do |product| %>
+                  <div class="large-4 small-6 columns">
+
+                    <figure>
+                      <div class="blur-img">
+                        <%= link_to image_tag(product.image), "/products/#{product.id}", :class => 'index-image' %>
+                      </div>
+                      
+                      <figcaption>
+                          <h5><%= product.name %></h5>
+                          <span class="subheader"><%= product.description %></span>
+                      </figcaption>
+                    </figure>
+                    
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+<!-- outer most divs -->
+  </div>
+</div>  
