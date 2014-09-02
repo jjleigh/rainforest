@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'products#index'
-
+  get "log_out" => "sessions#destroy", :as => "log_out" 
+  
   resources :sessions, :only => [:new, :create, :destroy]
 
   resources :users, :only => [:new, :create]
