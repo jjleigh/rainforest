@@ -3,7 +3,7 @@
     <div class="poster">
     	<% if review.user != nil %>
 
-        <p><strong>Posted by:</strong> <%= review.user.name %> <i>on</i> <%= review.created_at %></p>
+        <p><strong>Posted by:</strong> <%= review.user.name %> <i>on</i> <%= review.created_at.strftime("%A, %B %d, %Y") %></p>
       <% end %>
     </div>
     <p class='comment'>
