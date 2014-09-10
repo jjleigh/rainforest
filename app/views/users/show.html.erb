@@ -25,7 +25,7 @@
                       
                       <figcaption>
                           <h5><%= product.name %></h5>
-                          <span class="subheader"><%= product.description %></span>
+                          <span class="subheader"><%= truncate(product.description, length: 40) %></span>
                       </figcaption>
                     </figure>
                     
