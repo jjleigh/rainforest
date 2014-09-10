@@ -23,7 +23,7 @@ Product.destroy_all
 		name: "Product#{i}",
 		description: "Description#{i}",
 		price_in_cents: i,
-		image: 'http://www.boheme.net.au/wp-content/uploads/2013/09/SAM1727-1000x450.jpg'
+		image: 'https://cdn1.cdnme.se/20882/6-3/vardagsrum_5406ffbbe087c3598b47e044.jpg'
 		}
 	)
 end
