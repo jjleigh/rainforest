@@ -14,7 +14,7 @@ perclass ProductsController < ApplicationController
 
     # else
 
-      @products = Product.order('products.created_at DESC').page(params[:page]).per_page(8)
+      @products = Product.order('products.created_at DESC').page(params[:page])
 
       respond_to do |format|
         format.html #allows the controller to respond to Javascript
