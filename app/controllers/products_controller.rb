@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+perclass ProductsController < ApplicationController
   before_filter :ensure_logged_in, :except => [:show, :index]
 
   def index
@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
     # else
 
-      @products = Product.order('products.created_at DESC').page(params[:page])
+      @products = Product.order('products.created_at DESC').page(params[:page]).per_page(8)
 
       respond_to do |format|
         format.html #allows the controller to respond to Javascript
