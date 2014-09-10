@@ -1,12 +1,12 @@
-
+<!-- 
   <div class="row products-containers">
       
-      <% @products.each do |product| %>
+      <%# @products.each do |product| %>
     
         <div class="large-4 small-6 columns">
           <figure>
             <div class="blur-img">
-              <%= link_to image_tag(product.image), product_path(product.id), :class => 'index-image' %>
+              <%#= link_to image_tag(product.image), product_path(product.id), :class => 'index-image' %>
             </div>
             
             <figcaption>
@@ -14,13 +14,13 @@
               <div class="price">
                 $<%= product.formatted_price %>
               </div>
-                <span class="subheader"><%= truncate(product.description, length: 40) %></span>
+                <span class="subheader"><%#= truncate(product.description, length: 40) %></span>
             </figcaption>
           </figure>
         </div>
-      <% end %>
+      <%# end %>
   </div> 
-
+ -->
 
 
 
