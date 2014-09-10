@@ -23,7 +23,7 @@ Product.destroy_all
 		name: "Product#{i}",
 		description: "Description#{i}",
 		price_in_cents: i,
-		image: 'rainforest-bag.jpg'
+		image: 'http://www.boheme.net.au/wp-content/uploads/2013/09/SAM1727-1000x450.jpg'
 		}
 	)
 end
