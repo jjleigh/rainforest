@@ -1,23 +1,26 @@
 
   <div class="row ">
-    <% @products.each do |product| %>
-  
-      <div class="large-4 small-6 columns each-product">
-        <figure>
-          <div class="blur-img">
-            <%= link_to image_tag(product.image), product_path(product.id), :class => 'index-image' %>
-          </div>
-          
-          <figcaption>
-            <p class='text-center'><%= link_to product.name, product_path(product.id)  %></p>
-            <div class="price">
-              $<%= product.formatted_price %>
+    <div class="large-12 columns">
+      
+      <% @products.each do |product| %>
+    
+        <div class="large-4 small-6 columns each-product">
+          <figure>
+            <div class="blur-img">
+              <%= link_to image_tag(product.image), product_path(product.id), :class => 'index-image' %>
             </div>
-              <span class="subheader"><%= truncate(product.description, length: 40) %></span>
-          </figcaption>
-        </figure>
-      </div>
-    <% end %>
+            
+            <figcaption>
+              <p class='text-center'><%= link_to product.name, product_path(product.id)  %></p>
+              <div class="price">
+                $<%= product.formatted_price %>
+              </div>
+                <span class="subheader"><%= truncate(product.description, length: 40) %></span>
+            </figcaption>
+          </figure>
+        </div>
+      <% end %>
+    </div>
   </div> 
 
 
