@@ -1,4 +1,4 @@
-perclass ProductsController < ApplicationController
+class ProductsController < ApplicationController
   before_filter :ensure_logged_in, :except => [:show, :index]
 
   def index
