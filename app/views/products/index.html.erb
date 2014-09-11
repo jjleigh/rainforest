@@ -85,7 +85,9 @@
 
 
 		    <div id="products">
-		      <%= render 'product' %>
+		    	<div class="row products-containers">
+		      	<%= render :partial => 'product', :collection => @products %>
+		      </div>
 		    </div>
 
 
