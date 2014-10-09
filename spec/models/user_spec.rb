@@ -8,6 +8,7 @@ describe User do
 			expect(user_one).to be_valid
 		end 
 		# validation tests
+		
 		# name tests
 
 		it 'is invalid without a name' do
